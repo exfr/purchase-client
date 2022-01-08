@@ -1,0 +1,14 @@
+server:
+  port: ${APP_PORT:8082}
+spring:
+  application:
+    name: purchase-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      discovery:
+        enabled: true
+      activate:
+        on-profile: dev
